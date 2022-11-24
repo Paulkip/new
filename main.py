@@ -9,8 +9,8 @@ path="C:/Users/Public/Downloads"
 def index():
     url = 'https://www.youtube.com/watch?v=E_5d-jPeIVg'
     youtube = pytube.YouTube(url)
-    youtube.streams.filter(res="144p").first().download(path)
-    return ("hello world")
+    r=youtube.streams.filter(res="144p").first()
+    return (r)
 
 
 if __name__ == '__main__':
